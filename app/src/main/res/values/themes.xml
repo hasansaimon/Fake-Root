@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.FakeRoot" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">#0969da</item>
+        <item name="android:colorPrimaryDark">#0860ca</item>
+        <item name="android:colorAccent">#238636</item>
+        <item name="android:textColorPrimary">#0d1117</item>
+        <item name="android:textColorSecondary">#57606a</item>
+        <item name="android:windowBackground">#0d1117</item>
+    </style>
+</resources>

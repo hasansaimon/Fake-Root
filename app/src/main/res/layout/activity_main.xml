@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#0d1117">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fake Root"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:textColor="#58a6ff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Root Environment Emulator"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="#8b949e" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status: Ready"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:background="#161b22"
+            android:textColor="#79c0ff"
+            android:layout_marginBottom="24dp"
+            android:minHeight="120dp"
+            android:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/btnSetup"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="1️⃣ Setup Termux Environment"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_primary"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnPatch"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="2️⃣ Patch APK"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_success"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="3️⃣ Download & Patch"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_warning"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#161b22"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📋 Instructions"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#58a6ff"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Install Termux from F-Droid\n2. Tap Setup to prepare environment\n3. Select target APK to patch\n4. Install patched APK from Downloads"
+                android:textSize="13sp"
+                android:textColor="#8b949e"
+                android:lineSpacingMultiplier="1.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#161b22">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⏱️ Timing"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#58a6ff"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Setup: 10-30 minutes (first time)\nPatching: 5-15 minutes per APK"
+                android:textSize="13sp"
+                android:textColor="#8b949e"
+                android:lineSpacingMultiplier="1.5" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
