@@ -4,4 +4,22 @@
     <string name="button_setup">Setup Termux</string>
     <string name="button_patch">Patch APK</string>
     <string name="button_download">Download &amp; Patch</string>
+    <string name="button_installed_apps">Select Installed App</string>
+    <string name="status_initializing">Initializing…</string>
+    <string name="status_termux_missing">❌ Termux not installed
+
+Please install Termux from F-Droid first.</string>
+    <string name="status_termux_detected">✅ Termux detected
+
+Ready to proceed.</string>
+    <string name="status_select_apk">⏳ Select APK to patch…</string>
+    <string name="status_no_apk">❌ No APK selected</string>
+    <string name="status_copying_script">⏳ Copying setup script…</string>
+    <string name="status_launching_termux">⏳ Launching Termux…</string>
+    <string name="status_setup_started">✅ Setup started in Termux
+
+Check Termux for progress.
+This may take 10–30 minutes.</string>
+    <string name="installed_apps_title">Select Installed App</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -40,9 +40,19 @@
             android:padding="16dp"
             android:background="#161b22"
             android:textColor="#79c0ff"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="12dp"
             android:minHeight="120dp"
             android:fontFamily="monospace" />
+
+        <!-- Progress bar (indeterminate, shown during operations) -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
 
         <Button
             android:id="@+id/btnSetup"
@@ -59,11 +69,22 @@
             android:id="@+id/btnPatch"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="2️⃣ Patch APK"
+            android:text="2️⃣ Patch APK (from file)"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="12dp"
             android:background="@drawable/button_success"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnInstalledApps"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📦 Patch Installed App"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_primary"
             android:textColor="#ffffff" />
 
         <Button
