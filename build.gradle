@@ -1,16 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
     dependencies {
-        // 1. Upgraded to 9.1.1 to natively support Gradle 9+ execution environments
+        // Upgraded to 9.1.1 to natively support Gradle 9+ execution environments
         classpath 'com.android.tools.build:gradle:9.1.1'
     }
 }
 
-// 2. REMOVALS: The 'allprojects' block and 'buildscript repositories' have been completely 
-// stripped out to comply with your settings.gradle rules and stop the "prefer settings" crash.
+// Keep 'allprojects' out to satisfy the settings.gradle strict repository rules.
 
-// 3. Modernized the clean task structure to prevent Gradle 9 syntax deprecation errors
 tasks.register('clean', Delete) {
     delete rootProject.layout.buildDirectory
 }
