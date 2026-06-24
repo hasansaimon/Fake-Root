@@ -1,0 +1,84 @@
+name: Build Release APK
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          # Removed automatic caching to prevent errors while the wrapper is missing
+
+      # AUTOMATED FIX: Generates the missing gradlew script directly on the cloud runner
+      - name: Generate missing Gradle wrapper
+        run: gradle wrapper
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Clean build
+        run: ./gradlew clean
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Build release APK
+        run: ./gradlew assembleRelease
+
+      - name: Upload debug APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: app-debug
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
+
+      - name: Upload release APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: app-release
+          path: app/build/outputs/apk/release/app-release.apk
+          retention-days: 30
+
+      - name: Create Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            app/build/outputs/apk/debug/app-debug.apk
+            app/build/outputs/apk/release/app-release.apk
+          tag_name: v${{ github.run_number }}
+          body: |
+            # Fake Root Build ${{ github.run_number }}
+            
+            Built from commit: ${{ github.sha }}
+            Branch: ${{ github.ref_name }}
+            
+            ## Files
+            - `app-debug.apk` - Debug build for testing
+            - `app-release.apk` - Release build
+            
+            ## Installation
+            1. Download the APK file
+            2. Transfer to Android device
+            3. Enable "Unknown Sources" in settings
+            4. Install the APK
+            5. Open app and follow setup instructions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
