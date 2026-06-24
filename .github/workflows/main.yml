@@ -10,6 +10,11 @@ on:
       - main
   workflow_dispatch:
 
+# Explicit permissions for release creation
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,13 +26,9 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v5
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
-          # Removed automatic caching to prevent errors while the wrapper is missing
-
-      # AUTOMATED FIX: Generates the missing gradlew script directly on the cloud runner
-      - name: Generate missing Gradle wrapper
-        run: gradle wrapper
+          cache: gradle
 
       - name: Make gradlew executable
         run: chmod +x gradlew
