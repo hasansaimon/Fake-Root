@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "vscjava.vscode-java-dependency",
-        "vscjava.vscode-gradle"
+        "vscjava.vscode-gradle",
+        "haselerdev.aiquickfix"
     ]
 }
