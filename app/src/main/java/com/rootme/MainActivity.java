@@ -1,4 +1,4 @@
-package com.hackerai.fakeroot;
+package com.rootme;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -12,7 +12,7 @@ import java.io.*;
 
 public class MainActivity extends Activity {
 
-    private static final String TAG = "FakeRoot";
+    private static final String TAG = "RootMe";
     private TextView tvStatus;
     private Button btnSetup, btnPatch, btnDownload;
     private ScrollView scrollView;

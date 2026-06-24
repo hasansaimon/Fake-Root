@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Network Security Configuration for RootMe
+  
+  Allows cleartext traffic for:
+  - ADB over WiFi debugging (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 local networks)
+  - GitHub downloads during Termux setup
+  - Local development servers
+-->
+<network-security-config>
+    <!-- Allow cleartext for local/private network debugging -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">10.0.0.0/8</domain>
+        <domain includeSubdomains="true">172.16.0.0/12</domain>
+        <domain includeSubdomains="true">192.168.0.0/16</domain>
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+
+    <!-- Allow cleartext for GitHub (for tool downloads in Termux setup) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">github.com</domain>
+        <domain includeSubdomains="true">raw.githubusercontent.com</domain>
+        <domain includeSubdomains="true">github-releases.githubusercontent.com</domain>
+    </domain-config>
+
+    <!-- Default: use system policy (HTTPS required) -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fake Root"
+            android:text="RootMe"
             android:textSize="32sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -25,7 +25,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Root Environment Emulator"
+            android:text="Root Spoofer"
             android:textSize="14sp"
             android:gravity="center"
             android:layout_marginBottom="24dp"

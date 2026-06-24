@@ -1,11 +1,11 @@
 #!/bin/bash
-# Fake Root - Termux Setup - Complete Root Environment Emulator
+# RootMe - Termux Setup - Complete Root Environment Emulator
 # Run this ONCE in Termux to set up everything
 
 set -e
 
 echo "========================================"
-echo "  Fake Root - Termux Setup"
+echo "  RootMe - Termux Setup"
 echo "  Complete Root Environment Emulator"
 echo "========================================"
 echo ""
@@ -126,7 +126,7 @@ echo -e "${BLUE}[7/8] Creating patcher script...${NC}"
 
 cat > $HOME/rootspoofer/rootspoofer.sh << 'MAINSCRIPT'
 #!/data/data/com.termux/files/usr/bin/bash
-# Fake Root - APK Patcher
+# RootMe - APK Patcher
 
 set -e
 

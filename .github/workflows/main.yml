@@ -64,7 +64,7 @@ jobs:
             app/build/outputs/apk/release/app-release.apk
           tag_name: v${{ github.run_number }}
           body: |
-            # Fake Root Build ${{ github.run_number }}
+            # RootMe Build ${{ github.run_number }}
             
             Built from commit: ${{ github.sha }}
             Branch: ${{ github.ref_name }}

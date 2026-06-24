@@ -1,4 +1,4 @@
-# Fake Root - Root Environment Emulator for Android
+# RootMe - Root Environment Emulator for Android
 
 Make unrooted Android devices appear rooted to applications through Termux-based environment simulation.
 
@@ -21,7 +21,7 @@ Make unrooted Android devices appear rooted to applications through Termux-based
 
 ### Installation
 
-1. **Install Fake Root APK**
+1. **Install RootMe APK**
    - Download from Releases or build locally
 
 2. **Setup Environment**
@@ -61,10 +61,10 @@ docker run -v $(pwd):/app fakeroot ./gradlew assembleRelease
 ## Project Structure
 
 ```
-Fake-Root/
+RootMe/
 ├── app/
 │   ├── src/main/
-│   │   ├── java/com/hackerai/fakeroot/
+│   │   ├── java/com/rootme/
 │   │   │   └── MainActivity.java         # UI & Termux bridge
 │   │   ├── res/                          # Resources
 │   │   ├── assets/

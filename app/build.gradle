@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.hackerai.fakeroot'
+    namespace 'com.rootme'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.hackerai.fakeroot"
+        applicationId "com.rootme"
         minSdk 21
         targetSdk 34
         versionCode 1
