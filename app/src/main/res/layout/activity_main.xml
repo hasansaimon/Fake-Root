@@ -70,7 +70,7 @@
             android:id="@+id/btnDownload"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:text="3️⃣ Download & Patch"
+            android:text="3️⃣ Download &amp; Patch"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginBottom="24dp"
